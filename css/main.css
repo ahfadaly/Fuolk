@@ -121,9 +121,10 @@ textarea:focus {
   font-size: 35px;
   font-weight: 400;
 }
-.main-section .login a {
+.main-section .login a:last-child {
   background-color: var(--main-color);
 }
+
 @media (max-width: 991px) {
   .main-section::before {
     display: none;
@@ -193,8 +194,16 @@ textarea:focus {
 .about .title button,
 .our-vision .title button {
   background-color: var(--main-color);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
-
+.about .title button:hover,
+.our-vision .title button:hover {
+  background-color: #1c1b1b;
+}
 @media (max-width: 767px) {
   .about .title h5,
   .our-vision .title h5 {
