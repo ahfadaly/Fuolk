@@ -38,30 +38,4 @@ $(`document`).ready(() => {
       },
     },
   });
-
-  //  customer
-  $(".customer .owl-carousel").owlCarousel({
-    loop: true,
-    margin: 15,
-    rtl: true,
-    // autoplay: true,
-    // autoplayTimeout: 2000,
-    dots: true,
-    nav: true,
-    navText: [
-      '<button class="slide-arrow prev-arrow"><i class="fa-solid fa-arrow-left"></i></button>',
-      '<button class="slide-arrow prev-arrow"><i class="fa-solid fa-arrow-right"></i></button>',
-    ],
-    responsive: {
-      0: {
-        items: 1,
-      },
-      769: {
-        items: 1,
-      },
-      1200: {
-        items: 1,
-      },
-    },
-  });
 });

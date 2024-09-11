@@ -2,15 +2,12 @@
   touch-action: manipulation;
 }
 .our-partners .owl-carousel .owl-nav .owl-prev,
-.our-partners .owl-carousel .owl-nav .owl-next,
-.customer .owl-carousel .owl-nav .owl-prev,
-.customer .owl-carousel .owl-nav .owl-next {
+.our-partners .owl-carousel .owl-nav .owl-next {
   position: relative;
   background: none;
   top: 33%;
 }
-.our-partners .owl-carousel .slide-arrow,
-.customer .owl-carousel .slide-arrow {
+.our-partners .owl-carousel .slide-arrow {
   border: none;
   width: 42px;
   height: 42px;
@@ -32,33 +29,26 @@
   background-color: var(--main-color);
   color: #fff !important;
 }
-.our-partners .owl-carousel .owl-nav .owl-prev,
-.customer .owl-carousel .owl-nav .owl-prev {
+.our-partners .owl-carousel .owl-nav .owl-prev {
   position: absolute;
   left: 0;
 }
-.our-partners .owl-carousel .owl-nav .owl-next,
-.customer .owl-carousel .owl-nav .owl-next {
+.our-partners .owl-carousel .owl-nav .owl-next {
   position: absolute;
   right: 0;
 }
 .our-partners .owl-carousel .owl-nav .owl-prev:hover,
-.our-partners .owl-carousel .owl-nav .owl-next:hover,
-.customer .owl-carousel .owl-nav .owl-prev:hover,
-.customer .owl-carousel .owl-nav .owl-next:hover {
+.our-partners .owl-carousel .owl-nav .owl-next:hover {
   background-color: inherit;
 }
 @media (max-width: 991px) {
-  .our-partners .owl-carousel .owl-nav .owl-prev,
-  .customer .owl-carousel .owl-nav .owl-prev {
+  .our-partners .owl-carousel .owl-nav .owl-prev {
     left: 0;
   }
-  .our-partners .owl-carousel .owl-nav .owl-next,
-  .customer .owl-carousel .owl-nav .owl-next {
+  .our-partners .owl-carousel .owl-nav .owl-next {
     right: 0;
   }
-  .our-partners .owl-carousel .slide-arrow,
-  .customer .owl-carousel .slide-arrow {
+  .our-partners .owl-carousel .slide-arrow {
     display: none;
   }
 }
@@ -68,13 +58,8 @@
     display: none;
   }
 }
-
 .owl-theme .owl-dots .owl-dot {
   display: inline-block !important;
-}
-
-.customer .owl-theme .owl-dot span.active {
-  color: red;
 }
 .owl-theme .owl-dots .owl-dot.active span {
   background: var(--main-color) !important;
