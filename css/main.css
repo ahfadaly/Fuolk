@@ -210,9 +210,12 @@ textarea:focus {
   -o-border-radius: 20px;
 }
 .digital-solution .box-img img {
-  width: 200px;
+  width: 100%;
   border-radius: 20px;
   height: 150px;
+  object-fit: contain;
+  margin-right: auto;
+  display: block;
 }
 .digital-solution .card-hover:hover .box-img {
   border: solid 1px var(--main-color) !important;
