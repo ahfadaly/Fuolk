@@ -15,7 +15,6 @@ html {
 }
 body {
   font-family: "Cairo", sans-serif;
-  background: #f1f3f6;
 }
 button:focus,
 a:focus,
@@ -37,6 +36,17 @@ textarea:focus {
     font-size: 32px;
     line-height: 50px;
   }
+}
+.text-logo {
+  font-size: 40px;
+  color: #191515;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  user-select: none;
+}
+.text-logo span {
+  color: var(--main-color);
 }
 /* start header ------- */
 .header {
