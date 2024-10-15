@@ -10,11 +10,13 @@ html {
   scroll-padding-top: 30px;
 }
 :root {
-  --main-color: #f15a25;
+  --main-color: #052f61;
+  --second-color: #1483dc;
   --text-grey: #a9a9a9;
 }
 body {
   font-family: "Cairo", sans-serif;
+  background-color: #f1f3f6;
 }
 button:focus,
 a:focus,
@@ -28,7 +30,7 @@ textarea:focus {
 .text-h2 {
   color: var(--main-color);
   font-weight: 700;
-  font-size: 60px;
+  font-size: 55px;
   font-weight: 700;
 }
 @media (max-width: 991px) {
@@ -110,14 +112,13 @@ textarea:focus {
   color: var(--main-color);
 }
 .main-section .title p {
-  font-family: "Cairo", sans-serif;
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 55px;
+  font-size: 28px;
+  font-weight: 400;
+  color: #363636;
 }
 .main-section .title p:last-of-type {
   color: var(--text-grey);
-  font-size: 35px;
+  font-size: 24px;
   font-weight: 400;
 }
 .main-section .login a:last-child {
@@ -125,9 +126,12 @@ textarea:focus {
 }
 
 .main-section .version a {
-  background-color: var(--main-color);
+  background-color: var(--second-color);
 }
-
+.main-section a:hover {
+  background-color: var(--second-color) !important;
+  color: #fff !important;
+}
 @media (max-width: 991px) {
   .main-section::before {
     display: none;
@@ -156,68 +160,75 @@ textarea:focus {
 .digital-solution .rounded-box {
   border-radius: 40px;
 }
+.digital-solution .box {
+  background-color: #eeeeee;
+  border-radius: 30px;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s;
+}
 .digital-solution .icon {
-  background-color: #c7c7c7;
+  background-color: var(--second-color);
   width: 80px;
   height: 80px;
   padding: 15px;
   border-radius: 11px;
+  margin: auto;
 }
-.digital-solution .card-hover:hover .icon {
-  background-color: var(--main-color);
+.digital-solution .rounded-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 70%;
+  bottom: 30px;
+  margin: auto;
+  background-color: rgb(241, 240, 240);
 }
-.digital-solution .box h3 {
-  color: #5c5c5b;
-  font-size: 30px;
-  font-weight: 700;
+.digital-solution .box::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  bottom: -40px;
+  background-color: rgb(233, 230, 230);
+  border-radius: 50%;
+}
+.digital-solution .box-card:hover .box {
+  background-color: var(--second-color);
+}
+.digital-solution .box-card:hover .icon {
+  background-color: #fff;
+}
+.digital-solution .box-card:hover .box::before {
+  background-color: var(--second-color) !important;
+}
+.digital-solution .box-card:hover img {
+  filter: grayscale(100%) brightness(3) invert(3) !important;
+  -webkit-filter: grayscale(100%) brightness(3) invert(3) !important;
+}
+.digital-solution .box-card:hover h4 {
+  color: #fff;
+}
+.digital-solution .box h4 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 5px;
 }
 .digital-solution .rounded-box {
   cursor: pointer;
   position: relative;
 }
-.digital-solution .rounded-box::before {
-  content: "";
-  position: absolute;
-  left: 30px;
-  height: 370px;
-  width: 1px;
-  top: 20%;
-  background-color: rgb(216, 213, 213);
-}
 .digital-solution .card-hover {
   position: relative;
-}
-.digital-solution .card-hover::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  height: 15px;
-  width: 15px;
-  top: 80px;
-  background-color: rgb(216, 213, 213);
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-.digital-solution .card-hover:hover::before {
-  background-color: var(--main-color) !important;
-}
-.digital-solution .card-hover:hover h3 {
-  color: var(--main-color);
 }
 .digital-solution .box p {
   font-size: 22px;
   font-weight: 400;
   color: #4f5665;
-}
-.digital-solution .box-img {
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
 }
 .digital-solution .box-img img {
   width: 100%;
@@ -230,9 +241,30 @@ textarea:focus {
 .digital-solution .card-hover:hover .box-img {
   border: solid 1px var(--main-color) !important;
 }
+.digital-solution .desc {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+.digital-solution .box-card:hover .desc {
+  height: 200px;
+}
+.digital-solution .desc h5 {
+  color: var(--second-color);
+  font-size: 22px;
+}
+.digital-solution .desc h6 {
+  color: var(--second-color);
+  font-weight: 400;
+}
+.digital-solution .desc p {
+  color: #4f5665;
+  font-size: 18px;
+}
 @media (max-width: 991px) {
   .digital-solution .rounded-box::before,
-  .digital-solution .card-hover::before {
+  .digital-solution .box::before {
     display: none;
   }
 
@@ -255,7 +287,6 @@ textarea:focus {
   font-weight: 700;
 }
 @media (min-width: 992px) {
-  .about::after,
   .platform::after,
   .convenience::after {
     content: "";
@@ -266,10 +297,9 @@ textarea:focus {
     right: 0;
     top: 30px;
     width: 150px;
-    height: 150px;
+    height: 170px;
     z-index: -1;
   }
-  .about::before,
   .platform .title::before {
     content: "";
     background-image: url(../images/about-aftter.svg);
@@ -278,8 +308,8 @@ textarea:focus {
     position: absolute;
     left: 0;
     top: 30px;
-    width: 200px;
-    height: 150px;
+    width: 150px;
+    height: 170px;
     z-index: -1;
   }
 }
@@ -293,8 +323,14 @@ textarea:focus {
 
 /* start our-vision  */
 .our-vision {
-  background-color: #ff8b0d;
+  background-image: url(../images/our-vision.jpg);
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .our-vision .title button {
   background-color: var(--main-color);
@@ -307,21 +343,14 @@ textarea:focus {
 .our-vision .title button:hover {
   background-color: #1c1b1b;
 }
+@media (max-width: 991px) {
+  .our-vision {
+    height: auto;
+  }
+}
 /* end our-vision  */
 
 /* start platform */
-.platform::before {
-  content: "";
-  position: absolute;
-  background-image: url(../images/ellipse.png);
-  background-size: cover;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  background-repeat: no-repeat;
-  width: 300px;
-  z-index: -1;
-}
 .platform .head h4 {
   color: var(--main-color);
 }
@@ -333,7 +362,7 @@ textarea:focus {
   -o-border-radius: 30px;
 }
 .platform .desc .icon {
-  background-color: var(--main-color);
+  background-color: var(--second-color);
   width: 70px;
   height: 70px;
   border-radius: 20px;
