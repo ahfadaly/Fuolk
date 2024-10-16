@@ -56,6 +56,7 @@ textarea:focus {
   z-index: 999;
   position: relative;
   background-image: url(../images/cover.png);
+  height: 800px;
 }
 .header .logo img {
   width: 134px;
@@ -82,7 +83,15 @@ textarea:focus {
 .header .Close {
   color: var(--main-color);
 }
+@media (min-width: 1400px) {
+  .header {
+    height: 100vh;
+  }
+}
 @media (max-width: 991px) {
+  .header {
+    height: auto;
+  }
   .header .list li {
     margin-bottom: 10px;
   }
@@ -132,10 +141,8 @@ textarea:focus {
   background-color: var(--second-color) !important;
   color: #fff !important;
 }
+
 @media (max-width: 991px) {
-  .main-section::before {
-    display: none;
-  }
   .main-section .title h1 {
     font-size: 40px;
   }
